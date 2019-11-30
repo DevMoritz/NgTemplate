@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark">
+  <a class="navbar-brand" routerLink="/">NgTemplate</a>
+  <button class="navbar-toggler collapsed"
+          type="button"
+          (click)="collapseHeader()"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse" [ngClass]="showHeader ? 'show' : ''">
+    <ul class="navbar-nav mr-auto">
+      <ng-container *ngFor="let route of headerRoutes">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="route.path" *ngIf="route.data && route.data.title" (click)="showHeader = false">
+            {{ route.data.title }}
+          </a>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</nav>
