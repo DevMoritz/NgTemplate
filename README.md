@@ -3,7 +3,7 @@
 
 ## Dependencies installation
 > To install all dependencies run: ```npm install```
-> All dependencies are listet package.json
+> All dependencies are listet in package.json
 
 ## Development server
 >Run ```ng serve``` for a local development server. Navigate to `http://localhost:4200/`. 
